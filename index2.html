@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="My Webpage">
+    <meta name="keywords" content="Hello, World! website">
+    <meta name="author" content="Brian Musembi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <script src="file.js"></script>
+  </head>
+  <body>
+    <h1>MY WEBPAGE</h1>
+    <h2>WELCOME TO MY WEBPAGE!</h2>
+    <h3>Click anywhere on the this webpage to change the color of the background</h3>
+    <img src="./images/adventuretime.jpg" id="helloworld">
+    <button onclick="change()">Change Show</button>
+    <p id="myp" onclick="myFunction()">This is the end of the webpage.</p>
+    <h2 id="demo" onclick="colortext()">Goodbye, World!</h2>
+    <button type="button" onclick="myFunction()">Set font and size</button>
+    <script>
+      window.onclick = change;
+      function change () {
+      var image = document.getElementById('helloworld');
+      image.src = "./images/regularshow.jpg";}
+      window.onclick = background;
+      function background() {
+      document.getElementsByTagName("body")[0].style.backgroundColor = "burlywood";}
+      function myFunction() {
+      document.getElementById("myp").style.font = "italic bold 50px verdana";}
+    </script>
+    <button type="button" onclick="colortext()">Change text color</button>
+    <script>
+      function colortext() {
+      document.getElementById("demo").style.color = "red";}
+    </script>
+  </body>
+</html>
